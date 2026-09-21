@@ -1,3 +1,6 @@
+Yes — here is a complete redesigned version. I kept the original functionality but gave it a more premium, modern storefront feel with a cleaner dark/cream palette, glass header, better cards, animated hero, category chips, improved flash deal, responsive mobile navigation, and polished interactions.
+
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -892,4 +895,4 @@
 
         .testimonial blockquote {
             font-family: "Playfair Display", serif
-
+```
