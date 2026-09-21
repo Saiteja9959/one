@@ -12,26 +12,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* ========== MODERN DESIGN TOKENS ========== */
+        /* ========== BLUE DESIGN TOKENS ========== */
         :root {
-            /* refined palette — softer, more contemporary */
-            --bg: #f8f7f5;
+            /* refined blue palette — cohesive & professional */
+            --bg: #f5f8ff;
             --bg-card: #ffffff;
-            --primary: #141b2b;
-            --primary-light: #2a3348;
-            --accent: #e2725b;
-            --accent-light: #fce9e3;
-            --accent-dark: #c15a44;
-            --muted: #6c6c7c;
-            --muted-light: #9d9dab;
-            --surface: #f0eeeb;
-            --success: #2e9e8f;
-            --warning: #e9c46a;
+            --primary: #0b1e3d;
+            --primary-light: #1e3a5f;
+            --accent: #2563eb;
+            --accent-light: #dbeafe;
+            --accent-dark: #1d4ed8;
+            --accent-soft: #eff6ff;
+            --muted: #5b6c8a;
+            --muted-light: #8fa3c4;
+            --surface: #e8eefb;
+            --success: #059669;
+            --warning: #f59e0b;
             --radius: 24px;
             --radius-sm: 14px;
             --radius-xs: 10px;
-            --shadow: 0 8px 30px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
-            --shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.08), 0 6px 14px rgba(0, 0, 0, 0.03);
+            --shadow: 0 8px 30px rgba(11, 30, 61, 0.05), 0 2px 6px rgba(11, 30, 61, 0.03);
+            --shadow-hover: 0 20px 50px rgba(11, 30, 61, 0.10), 0 6px 14px rgba(11, 30, 61, 0.04);
             --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             --container: 1280px;
             --header-height: 76px;
@@ -105,7 +106,7 @@
             background: var(--accent-dark);
             border-color: var(--accent-dark);
             transform: translateY(-3px);
-            box-shadow: 0 12px 28px -8px rgba(224, 114, 91, 0.4);
+            box-shadow: 0 12px 28px -8px rgba(37, 99, 235, 0.45);
         }
         .btn-secondary {
             background: var(--primary);
@@ -116,7 +117,7 @@
             background: var(--primary-light);
             border-color: var(--primary-light);
             transform: translateY(-3px);
-            box-shadow: 0 12px 28px -8px rgba(20, 27, 43, 0.3);
+            box-shadow: 0 12px 28px -8px rgba(11, 30, 61, 0.35);
         }
         .btn-ghost {
             background: rgba(255, 255, 255, 0.1);
@@ -135,14 +136,14 @@
             position: sticky;
             top: 0;
             z-index: 200;
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(20px) saturate(180%);
             -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border-bottom: 1px solid rgba(20, 27, 43, 0.05);
+            border-bottom: 1px solid rgba(11, 30, 61, 0.06);
             transition: box-shadow 0.3s ease;
         }
         header.scrolled {
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 4px 20px rgba(11, 30, 61, 0.06);
         }
         .header-inner {
             display: flex;
@@ -192,8 +193,8 @@
         }
         nav.main-nav li a:hover,
         nav.main-nav li a.active {
-            background: var(--surface);
-            color: var(--primary);
+            background: var(--accent-soft);
+            color: var(--accent-dark);
         }
         nav.main-nav li a i {
             font-size: 14px;
@@ -218,8 +219,8 @@
             position: relative;
         }
         .header-actions .icon-btn:hover {
-            background: var(--surface);
-            color: var(--primary);
+            background: var(--accent-soft);
+            color: var(--accent-dark);
             transform: translateY(-2px);
         }
 
@@ -257,7 +258,7 @@
         .search-wrap:focus-within {
             border-color: var(--accent);
             background: #fff;
-            box-shadow: 0 0 0 5px rgba(224, 114, 91, 0.08);
+            box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.10);
         }
         .search-wrap input {
             border: 0;
@@ -302,9 +303,9 @@
         #mobileMenu {
             display: none;
             background: #fff;
-            border-top: 1px solid rgba(20, 27, 43, 0.04);
+            border-top: 1px solid rgba(11, 30, 61, 0.05);
             padding: 12px 0 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 20px 40px rgba(11, 30, 61, 0.06);
         }
         #mobileMenu ul {
             display: flex;
@@ -322,10 +323,10 @@
             transition: var(--transition);
             font-size: 15px;
         }
-        #mobileMenu ul li a:hover { background: var(--surface); }
+        #mobileMenu ul li a:hover { background: var(--accent-soft); }
         #mobileMenu ul li a i { width: 22px; color: var(--muted); font-size: 16px; }
 
-        /* ========== HERO — BOLD & MODERN ========== */
+        /* ========== HERO — BLUE GRADIENT ========== */
         .hero {
             position: relative;
             display: flex;
@@ -335,14 +336,14 @@
             border-radius: var(--radius);
             overflow: hidden;
             margin: 24px 28px 0;
-            background: linear-gradient(145deg, #0f1420 0%, #1a2336 100%);
+            background: linear-gradient(145deg, #0b1e3d 0%, #1e3a5f 100%);
         }
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
             background: url('https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            opacity: 0.3;
+            opacity: 0.25;
             z-index: 0;
             transform: scale(1.02);
             transition: transform 8s ease;
@@ -353,8 +354,8 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(226, 114, 91, 0.18);
-            color: var(--accent);
+            background: rgba(37, 99, 235, 0.20);
+            color: #93c5fd;
             padding: 6px 18px;
             border-radius: 999px;
             font-weight: 600;
@@ -362,7 +363,7 @@
             letter-spacing: 0.3px;
             margin-bottom: 20px;
             backdrop-filter: blur(4px);
-            border: 1px solid rgba(226, 114, 91, 0.15);
+            border: 1px solid rgba(37, 99, 235, 0.25);
         }
         .hero h1 {
             font-family: 'Playfair Display', serif;
@@ -538,7 +539,7 @@
             color: var(--muted);
             transition: var(--transition);
             backdrop-filter: blur(4px);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 2px 8px rgba(11, 30, 61, 0.06);
         }
         .product-card .wish-btn:hover {
             background: #fff;
@@ -621,7 +622,7 @@
         .product-card .footer .add-btn:hover {
             background: var(--accent);
             transform: scale(1.02);
-            box-shadow: 0 8px 20px -8px rgba(224, 114, 91, 0.4);
+            box-shadow: 0 8px 20px -8px rgba(37, 99, 235, 0.5);
         }
         .product-card .footer .add-btn.added { background: var(--success); }
 
@@ -633,7 +634,7 @@
             border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow);
-            border: 1px solid rgba(20, 27, 43, 0.03);
+            border: 1px solid rgba(11, 30, 61, 0.04);
         }
         .deal-wrap .deal-img {
             flex: 0 0 48%;
@@ -714,7 +715,7 @@
             border-radius: var(--radius-xs);
             min-width: 76px;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(20, 27, 43, 0.1);
+            box-shadow: 0 4px 12px rgba(11, 30, 61, 0.15);
         }
         .timer-box .num {
             font-size: 28px;
@@ -752,7 +753,7 @@
             box-shadow: var(--shadow);
             scroll-snap-align: start;
             transition: var(--transition);
-            border: 1px solid rgba(20, 27, 43, 0.03);
+            border: 1px solid rgba(11, 30, 61, 0.04);
         }
         .testimonial-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
         .testimonial-card .stars {
@@ -793,7 +794,7 @@
 
         /* ========== NEWSLETTER ========== */
         .newsletter-wrap {
-            background: linear-gradient(145deg, var(--primary) 0%, #1e2a40 100%);
+            background: linear-gradient(145deg, var(--primary) 0%, #1e3a5f 100%);
             border-radius: var(--radius);
             padding: 56px 64px;
             color: #fff;
@@ -812,7 +813,7 @@
             right: -10%;
             width: 400px;
             height: 400px;
-            background: radial-gradient(circle, rgba(226, 114, 91, 0.12) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
             border-radius: 50%;
             pointer-events: none;
         }
@@ -844,7 +845,7 @@
             border-radius: 999px;
             border: 0;
             font-size: 15px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.10);
             color: #fff;
             transition: var(--transition);
             outline: 2px solid transparent;
@@ -865,7 +866,7 @@
             background: var(--accent-dark);
             border-color: var(--accent-dark);
             transform: translateY(-2px);
-            box-shadow: 0 12px 28px -8px rgba(224, 114, 91, 0.4);
+            box-shadow: 0 12px 28px -8px rgba(37, 99, 235, 0.5);
         }
         #newsletterMsg {
             margin-top: 14px;
@@ -879,7 +880,7 @@
         footer {
             margin-top: 24px;
             padding: 56px 0 32px;
-            border-top: 1px solid rgba(20, 27, 43, 0.04);
+            border-top: 1px solid rgba(11, 30, 61, 0.05);
         }
         .footer-grid {
             display: grid;
@@ -917,7 +918,7 @@
             background: var(--accent);
             color: #fff;
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px -6px rgba(224, 114, 91, 0.4);
+            box-shadow: 0 8px 20px -6px rgba(37, 99, 235, 0.5);
         }
         .footer-grid .col h5 {
             font-weight: 700;
@@ -940,7 +941,7 @@
         .footer-bottom {
             text-align: center;
             padding-top: 24px;
-            border-top: 1px solid rgba(20, 27, 43, 0.04);
+            border-top: 1px solid rgba(11, 30, 61, 0.05);
             color: var(--muted-light);
             font-size: 13px;
         }
@@ -1607,7 +1608,7 @@
             }
         });
 
-        console.log('🚀 NexusShop — polished e‑commerce demo loaded.');
+        console.log('🚀 NexusShop — blue-themed e‑commerce demo loaded.');
     </script>
 
 </body>
